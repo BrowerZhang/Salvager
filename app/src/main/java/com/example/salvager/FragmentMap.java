@@ -13,7 +13,8 @@ public class FragmentMap extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragmentmap_layout,container,false);
-        return rootView;
+
+        View view = inflater.inflate(R.layout.fragment_map,container, attachToRoot false)
+        return
     }
 }

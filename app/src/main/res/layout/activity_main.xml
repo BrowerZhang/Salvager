@@ -18,4 +18,9 @@
         android:layout_alignParentBottom="true"
         app:menu="@menu/nav_menu"/>
 
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:="@+id/frame_layout"/>
+
 </RelativeLayout>
