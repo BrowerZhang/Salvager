@@ -22,7 +22,7 @@ public class FragmentMap extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         //initialize view
-        ViewGroup view = (ViewGroup) inflater.inflate(R.layout.fragmentmap_layout,container,false);
+        View view = inflater.inflate(R.layout.fragmentmap_layout,container,false);
 
         //initialize map fragment
         SupportMapFragment supportMapFragment = (SupportMapFragment)
@@ -32,25 +32,22 @@ public class FragmentMap extends Fragment {
         supportMapFragment.getMapAsync(new OnMapReadyCallback() {
             @Override
             public void onMapReady(@NonNull GoogleMap googleMap) {
-                //when map is loaded
-                googleMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
-                    @Override
-                    public void onMapClick(@NonNull LatLng latLng) {
-                        //when clicked on map
-                        //initialize marker options
-                        MarkerOptions markerOptions = new MarkerOptions();
-                        //set postition of marker
-                        markerOptions.position(latLng);
-                        //set title of marker
-                        markerOptions.title(latLng.latitude + " : " + latLng.longitude);
-                        //remove all marker
-                        googleMap.clear();
-                        //animating to zoom the marker
-                        googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 10));
-                        //add marker on map
-                        googleMap.addMarker(markerOptions);
-                    }
-                });
+                MarkerOptions markerOptions1 = new MarkerOptions();
+                MarkerOptions markerOptions2 = new MarkerOptions();
+                MarkerOptions markerOptions3 = new MarkerOptions();
+                MarkerOptions markerOptions4 = new MarkerOptions();
+
+                markerOptions1.position( , );
+                markerOptions2.position( , );
+                markerOptions3.position( , );
+                markerOptions4.position( , );
+
+                googleMap.addMarker(markerOptions1);
+                googleMap.addMarker(markerOptions2);
+                googleMap.addMarker(markerOptions3);
+                googleMap.addMarker(markerOptions4);
+
+
             }
         });
 
