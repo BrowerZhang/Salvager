@@ -1,5 +1,6 @@
 package com.example.salvager;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +15,7 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 public class FragmentMap extends Fragment {
@@ -45,6 +47,7 @@ public class FragmentMap extends Fragment {
                 //Added latitute and longitude to centeralize map when opening map tab
                 LatLng num5 = new LatLng(32.03265415443687, -81.12086433931199);
 
+
                 markerOptions1.position(center1);
                 markerOptions2.position(center2);
                 markerOptions3.position(center3);
@@ -60,9 +63,18 @@ public class FragmentMap extends Fragment {
                 googleMap.addMarker(markerOptions3);
                 googleMap.addMarker(markerOptions4);
 
-
-
                 googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(num5, 10));
+
+                googleMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
+                    @Override
+                    public boolean onMarkerClick(@NonNull Marker marker) {
+                        String markerTitle = marker.getTitle();
+
+                        Intent i = new Intent(FragmentMap.this, DetailsActivity.class);
+
+                        return false;
+                    }
+                });
             }
         });
 
