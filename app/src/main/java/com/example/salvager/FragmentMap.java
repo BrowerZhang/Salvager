@@ -37,17 +37,29 @@ public class FragmentMap extends Fragment {
                 MarkerOptions markerOptions3 = new MarkerOptions();
                 MarkerOptions markerOptions4 = new MarkerOptions();
 
-                markerOptions1.position(32.00498573886551, -81.09589305338758);
-                markerOptions2.position(32.01878014682245, -80.97238626398435);
-                markerOptions3.position(31.976412620414038, -81.24906714852901);
-                markerOptions4.position(32.08649534215099, -81.16876499673256);
+                LatLng num1 = new LatLng(32.00498573886551, -81.09589305338758);
+                LatLng num2 = new LatLng(32.01878014682245, -80.97238626398435);
+                LatLng num3 = new LatLng(31.976412620414038, -81.24906714852901);
+                LatLng num4 = new LatLng(32.08649534215099, -81.16876499673256);
+                LatLng num5 = new LatLng(32.03265415443687, -81.12086433931199);
+
+                markerOptions1.position(num1);
+                markerOptions2.position(num2);
+                markerOptions3.position(num3);
+                markerOptions4.position(num4);
+
 
                 googleMap.addMarker(markerOptions1);
                 googleMap.addMarker(markerOptions2);
                 googleMap.addMarker(markerOptions3);
                 googleMap.addMarker(markerOptions4);
 
+                markerOptions1.title("");
+                markerOptions2.title("");
+                markerOptions3.title("");
+                markerOptions4.title("");
 
+                googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(num5, 10));
             }
         });
 
