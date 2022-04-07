@@ -37,10 +37,10 @@ public class FragmentMap extends Fragment {
                 MarkerOptions markerOptions3 = new MarkerOptions();
                 MarkerOptions markerOptions4 = new MarkerOptions();
 
-                markerOptions1.position( , );
-                markerOptions2.position( , );
-                markerOptions3.position( , );
-                markerOptions4.position( , );
+                markerOptions1.position(32.00498573886551, -81.09589305338758);
+                markerOptions2.position(32.01878014682245, -80.97238626398435);
+                markerOptions3.position(31.976412620414038, -81.24906714852901);
+                markerOptions4.position(32.08649534215099, -81.16876499673256);
 
                 googleMap.addMarker(markerOptions1);
                 googleMap.addMarker(markerOptions2);
