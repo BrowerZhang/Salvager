@@ -50,16 +50,17 @@ public class FragmentMap extends Fragment {
                 markerOptions3.position(center3);
                 markerOptions4.position(center4);
 
+                markerOptions1.title("Chatham County Resource Conservation and Recycling Education Center");
+                markerOptions2.title("Wilmington Island Drop-Off Center");
+                markerOptions3.title("Chevis Road Drop-Off Center");
+                markerOptions4.title("Sharon Park Drop-Off Center");
 
                 googleMap.addMarker(markerOptions1);
                 googleMap.addMarker(markerOptions2);
                 googleMap.addMarker(markerOptions3);
                 googleMap.addMarker(markerOptions4);
 
-                markerOptions1.title("Chatham County Resource Conservation and Recycling Education Center");
-                markerOptions2.title("Wilmington Island Drop-Off Center\n");
-                markerOptions3.title("Chevis Road Drop-Off Center\n");
-                markerOptions4.title("Sharon Park Drop-Off Center");
+
 
                 googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(num5, 10));
             }
