@@ -18,5 +18,7 @@ public class DetailActivity extends AppCompatActivity {
         markertxt.setText(title);
 
 
+
+
     }
 }
