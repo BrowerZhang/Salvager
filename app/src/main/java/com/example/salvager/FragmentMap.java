@@ -19,10 +19,10 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class FragmentMap extends FragmentActivity {
+public class FragmentMap extends Fragment {
     @Nullable
 
-    //@Override
+    @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         //initialize view
@@ -30,7 +30,7 @@ public class FragmentMap extends FragmentActivity {
 
         //initialize map fragment
         SupportMapFragment supportMapFragment = (SupportMapFragment)
-                getSupportFragmentManager().findFragmentById(R.id.google_map);
+                getChildFragmentManager().findFragmentById(R.id.google_map);
 
         //async map
         supportMapFragment.getMapAsync(new OnMapReadyCallback() {
@@ -67,12 +67,13 @@ public class FragmentMap extends FragmentActivity {
 
                 googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(num5, 10));
 
+
                 googleMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
                     @Override
                     public boolean onMarkerClick(@NonNull Marker marker) {
                         String markerTitle = marker.getTitle();
 
-                        Intent i = new Intent(FragmentMap.this ,DetailActivity.class);
+                        Intent i = new Intent(getActivity(),DetailActivity.class);
                         i.putExtra("title",markerTitle);
                         startActivity(i);
 

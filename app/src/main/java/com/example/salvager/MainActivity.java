@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
                 switch (item.getItemId())
                 {
                     case R.id.ic_map:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer, new Fragment()).commit();
+                        fragment = new FragmentMap();
                         break;
                 }
                 switch (item.getItemId())
