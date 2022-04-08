@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -18,9 +19,10 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class FragmentMap extends Fragment {
+public class FragmentMap extends FragmentActivity {
     @Nullable
-    @Override
+
+    //@Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         //initialize view
@@ -28,7 +30,7 @@ public class FragmentMap extends Fragment {
 
         //initialize map fragment
         SupportMapFragment supportMapFragment = (SupportMapFragment)
-                getChildFragmentManager().findFragmentById(R.id.google_map);
+                getSupportFragmentManager().findFragmentById(R.id.google_map);
 
         //async map
         supportMapFragment.getMapAsync(new OnMapReadyCallback() {
@@ -70,7 +72,9 @@ public class FragmentMap extends Fragment {
                     public boolean onMarkerClick(@NonNull Marker marker) {
                         String markerTitle = marker.getTitle();
 
-                        Intent i = new Intent(FragmentMap.this, DetailsActivity.class);
+                        Intent i = new Intent(FragmentMap.this ,DetailActivity.class);
+                        i.putExtra("title",markerTitle);
+                        startActivity(i);
 
                         return false;
                     }
