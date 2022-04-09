@@ -11,35 +11,37 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAlignment="center"
-        android:layout_centerInParent="true"
-        android:textSize="30dp"
+        android:text="Wilmington Island Drop-Off Center"
+        android:textSize="29sp"
         android:textStyle="bold"
-        android:id="@+id/marker"
-        />
+        android:background="@color/red2"
+        android:id="@+id/top"/>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top"
+        android:layout_marginTop="25dp"
+        android:text="Address: 7022 Concord Road, Savannah, GA \nHours: Monday – Saturday 8:30 to 5:00 | Sunday 12:00 to 5:00"
+        android:textSize="20sp"
+        android:id="@+id/middle"/>
 
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Wilmington Island Drop-Off Center \n
-        Address: 7022 Concord Road, Savannah, GA \n
-        Hours: Monday – Saturday 8:30 to 5:00 | Sunday 12:00 to 5:00 \n
-        What Can Be Recycled at This Location: \n
-        - Cardboard \n
-        - News Paper \n
-        - Magazines \n
-        - Office Paper \n
-        - Scrap Metal \n
-        - Cans (Cleaned soup or food) \n
-        - Plastics 1 and 2 (clear bottle, Milk Jug, and Detergent bottle) \n
-        - Used Cooking Oil \n
-        - Used Motor Oil \n"
-        android:textSize="10sp"/>
-
-
-
-
-
+        android:layout_below="@+id/middle"
+        android:layout_marginTop="25dp"
+        android:text="What Can Be Recycled at This Location: \n
+    - Cardboard \n
+    - News Paper \n
+    - Magazines \n
+    - Office Paper \n
+    - Scrap Metal \n
+    - Cans (Cleaned soup or food) \n
+    - Plastics 1 and 2 (clear bottle, Milk Jug, and Detergent bottle) \n
+    - Used Cooking Oil \n
+    - Used Motor Oil"
+        android:textSize="15sp" />
 
 </RelativeLayout>

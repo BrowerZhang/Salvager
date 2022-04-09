@@ -12,7 +12,7 @@ public class ActivitySharon extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sharon);
-        markertxt=findViewById(R.id.marker);
+
 
 
 
