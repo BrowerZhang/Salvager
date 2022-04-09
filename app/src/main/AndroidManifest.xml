@@ -14,7 +14,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Salvager">
         <activity
-            android:name=".DetailActivity"
+            android:name=".ActivityChevis"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityChatham"
+            android:exported="false" />
+        <activity
+            android:name=".ActivitySharon"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityWilmington"
             android:exported="false" />
 
         <meta-data

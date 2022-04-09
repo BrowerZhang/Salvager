@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityChatham">
+
+
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="Chatham County Resource Conservation and Recycling Education Center"
+        android:textSize="29sp"
+        android:textStyle="bold"
+        android:background="@color/red2"
+        android:id="@+id/top"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top"
+        android:layout_marginTop="25dp"
+        android:text="Address: 1321 Eisenhower Dr, Savannah, GA 31406 \nHours: Tuesday – Saturday 8:30 to 5:00"
+        android:textSize="20sp"
+        android:id="@+id/middle"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/middle"
+        android:layout_marginTop="25dp"
+        android:text="What Can Be Recycled at This Location: \n
+    - Cardboard \n
+    - News Paper \n
+    - Magazines \n
+    - Office Paper \n
+    - Scrap Metal \n
+    - Cans (Cleaned soup or food) \n
+    - Plastics 1 and 2 (clear bottle, Milk Jug, and Detergent bottle) \n
+    - Used Cooking Oil \n
+    - Black plastic plant nursery pots \n
+    - Used Eye Glasses \n
+    - Used Motor Oil \n
+    - Lead Acid Batteries \n
+    - Rechargeable Batteries \n
+    - Old CD's \n
+    - Used Ink and Toner Cartridges \n
+    - Electronics (NO TVs) \n
+    - Mobile phones \n
+    - Plastic shopping bags \n"
+        android:textSize="15sp" />
+
+
+</RelativeLayout>

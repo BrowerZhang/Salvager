@@ -9,7 +9,6 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentActivity;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -72,10 +71,32 @@ public class FragmentMap extends Fragment {
                     @Override
                     public boolean onMarkerClick(@NonNull Marker marker) {
                         String markerTitle = marker.getTitle();
+                        if(marker.getTitle().equals("Chatham County Resource Conservation and Recycling Education Center"))
+                        {
+                            Intent i = new Intent(getActivity(), ActivityChatham.class);
+                            i.putExtra("title",markerTitle);
+                            startActivity(i);
+                        }
+                        else if (marker.getTitle().equals("Wilmington Island Drop-Off Center"))
+                        {
+                            Intent i = new Intent(getActivity(), ActivityWilmington.class);
+                            i.putExtra("title",markerTitle);
+                            startActivity(i);
+                        }
+                        else if (marker.getTitle().equals("Chevis Road Drop-Off Center"))
+                        {
+                            Intent i = new Intent(getActivity(), ActivityChevis.class);
+                            i.putExtra("title",markerTitle);
+                            startActivity(i);
+                        }
+                        else if (marker.getTitle().equals("Sharon Park Drop-Off Center"))
+                        {
+                            Intent i = new Intent(getActivity(), ActivitySharon.class);
+                            i.putExtra("title",markerTitle);
+                            startActivity(i);
+                        }
 
-                        Intent i = new Intent(getActivity(),DetailActivity.class);
-                        i.putExtra("title",markerTitle);
-                        startActivity(i);
+
 
                         return false;
                     }

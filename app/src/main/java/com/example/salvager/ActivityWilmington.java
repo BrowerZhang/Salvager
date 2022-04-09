@@ -1,21 +1,18 @@
 package com.example.salvager;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.widget.TextView;
 
-public class DetailActivity extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class ActivityWilmington extends AppCompatActivity {
 
     TextView markertxt;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_detail);
+        setContentView(R.layout.activity_wilmington);
         markertxt=findViewById(R.id.marker);
-
-        String title=getIntent().getStringExtra("title");
-        markertxt.setText(title);
 
 
 
