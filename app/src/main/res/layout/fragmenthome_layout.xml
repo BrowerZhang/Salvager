@@ -28,7 +28,9 @@
         android:id="@+id/bottom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Mission Statement"
+        android:text="Slogan"
+        android:textAlignment="center"
+        android:textSize="30dp"
         android:layout_below="@+id/ImageLogo"
         android:layout_marginTop="25dp"
         />
