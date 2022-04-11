@@ -1,13 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center">
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/split"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"/>
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="Frequently Asked Questions:" />
+    <TextView
+        android:id="@+id/qna"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@+id/title"
+        android:text=" Question: Answer\n
+Question: Answer\n
+Question: Answer\n
+Question: Answer\n
+Question: Answer"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:background="@color/gray"/>
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/FAQ"
-        android:textSize="50sp"/>
-</RelativeLayout>
+        android:id="@+id/titleLeft"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_alignEnd="@+id/split"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:text="Contact An Expert!"
+        android:layout_below="@+id/qna" />
+
+    <ImageView
+        android:id="@+id/ImageLeft"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignEnd="@+id/split"
+        android:layout_below="@+id/titleLeft"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_faq" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@android:dimen/thumbnail_height"
+        android:layout_alignEnd="@+id/split"
+        android:layout_marginTop="10dp"
+        android:text="Expert Information"
+        android:textSize="20sp"
+        android:background="@color/gray"
+        android:layout_below="@+id/ImageLeft"/>
+
+    <TextView
+        android:id="@+id/titleRight"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_alignStart="@+id/split"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:text="Contact Us!"
+        android:layout_below="@+id/qna"
+        android:layout_alignParentEnd="true"/>
+
+    <ImageView
+        android:id="@+id/ImageRight"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignStart="@+id/split"
+        android:layout_below="@+id/titleLeft"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_faq" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@android:dimen/thumbnail_height"
+        android:layout_alignStart="@+id/split"
+        android:layout_marginTop="10dp"
+        android:text="Our Information"
+        android:textSize="20sp"
+        android:background="@color/gray"
+        android:layout_below="@+id/ImageRight"
+        android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+</ScrollView>
