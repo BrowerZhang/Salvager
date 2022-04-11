@@ -6,26 +6,25 @@
     android:layout_height="match_parent"
     tools:context=".ActivityChevis">
 
-
-
-
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAlignment="center"
+        android:layout_height="110dp"
+        android:gravity="center"
         android:text="Chevis Road Drop-Off Center"
         android:textSize="29sp"
         android:textStyle="bold"
         android:background="@color/red2"
+        android:textColor="@color/white"
         android:id="@+id/top"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/top"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="10dp"
         android:text="Address: 610 Chevis Road, Savannah, GA \nHours: Tuesday - Saturday 8:30 to 5:00"
         android:textSize="20sp"
+        android:textColor="@color/black"
         android:id="@+id/middle"/>
 
 
@@ -33,7 +32,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/middle"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="10dp"
         android:text="What Can Be Recycled at This Location: \n
     - Cardboard \n
     - News Paper \n
@@ -42,7 +41,8 @@
     - Scrap Metal \n
     - Cans (Cleaned soup or food) \n
     - Plastics 1 and 2 (clear bottle, Milk Jug, and Detergent bottle) \n"
-        android:textSize="15sp" />
+        android:textSize="15sp"
+        android:textColor="@color/black"/>
 
 
 

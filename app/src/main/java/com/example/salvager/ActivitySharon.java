@@ -7,13 +7,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class ActivitySharon extends AppCompatActivity {
 
-    TextView markertxt;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sharon);
 
-
+        getSupportActionBar().hide();
 
 
 

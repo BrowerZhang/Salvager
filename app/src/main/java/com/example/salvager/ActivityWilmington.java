@@ -7,13 +7,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class ActivityWilmington extends AppCompatActivity {
 
-    TextView markertxt;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_wilmington);
 
-
+        getSupportActionBar().hide();
 
 
 
