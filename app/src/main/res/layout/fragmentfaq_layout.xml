@@ -2,22 +2,83 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
+
     <TextView
         android:id="@+id/split"
         android:layout_width="1dp"
         android:layout_height="match_parent"
         android:layout_centerInParent="true"/>
 
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Our Mission:"
+            android:textSize="30sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/summary"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/title"
+            android:text="
+        Salvager exists to educate and raise awareness of recycling for Savannah
+residents. By simplifying the recycling process for consumers,
+we believe people will be able to lessen their impact on the environment and
+understand how easy it is to recycle. Although Salvager only exists at the city
+level for now, with enough people working together, we can change the world for the better."
+            android:textSize="15sp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/horizontalSplit"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/summary"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/black"/>
+        <TextView
+            android:id="@+id/aboutUs"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/horizontalSplit"
+            android:text="About Us:"
+            android:textSize="25sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/aboutUsSum"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/aboutUs"
+            android:text="      Salvager was created by three H. V. Jenkins School of Engineering seniors Brower Zhang,
+Isabella Millan Merchan, and Jorge Aguilar in 2022 for their Engineering Capstone project.
+The idea for an app that can scan a material and check the recyclability of it was born
+because of their passion for a healthier environment and a lack of existing products
+available on the market. In Savannah, certain materials can only be recycled in certain
+drop-off points, some can be left at specific store locations, and even others are not
+available for recycling at all. With the hopes of making a product to help the city’s
+residents become more eco-friendly and the city’s recycling opportunities become more
+accessible they invented Salvager."
+            android:textSize="15sp"
+            android:textColor="@color/black"/>
+
     <TextView
         android:id="@+id/titleLeft"
         android:layout_width="match_parent"
         android:layout_height="30dp"
         android:layout_alignEnd="@+id/split"
+        android:layout_below="@+id/aboutUsSum"
         android:textSize="19sp"
         android:textStyle="bold"
         android:layout_marginTop="10dp"
@@ -25,14 +86,7 @@
         android:gravity="center"
         android:text="Contact An Expert!" />
 
-    <ImageView
-        android:id="@+id/ImageLeft"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_alignEnd="@+id/split"
-        android:layout_below="@+id/titleLeft"
-        android:layout_marginTop="10dp"
-        android:src="@drawable/ic_faq" />
+
 
     <TextView
         android:id="@+id/textLeft"
@@ -44,13 +98,14 @@
         android:textAlignment="center"
         android:textSize="20sp"
         android:background="@color/gray"
-        android:layout_below="@+id/ImageLeft"/>
+        android:layout_below="@+id/titleLeft"/>
 
     <TextView
         android:id="@+id/titleRight"
         android:layout_width="match_parent"
         android:layout_height="30dp"
         android:layout_alignStart="@+id/split"
+        android:layout_below="@+id/aboutUsSum"
         android:textSize="19sp"
         android:textStyle="bold"
         android:layout_marginTop="10dp"
@@ -59,52 +114,20 @@
         android:text="Contact Us!"
         android:layout_alignParentEnd="true"/>
 
-    <ImageView
-        android:id="@+id/ImageRight"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_alignStart="@+id/split"
-        android:layout_below="@+id/titleLeft"
-        android:layout_marginTop="10dp"
-        android:src="@drawable/ic_faq" />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="@android:dimen/thumbnail_height"
-        android:layout_alignStart="@+id/split"
-        android:layout_marginTop="10dp"
-        android:text="About Us: \n
-Salvager was created by three H. V. Jenkins School of Engineering seniors Brower Zhang,
-Isabella Millan Merchan, and Jorge Aguilar in 2022 for their Engineering Capstone project.
-The idea for an app that can scan a material and check the recyclability of it was born
-because of their passion for a healthier environment and a lack of existing products
-available on the market. In Savannah, certain materials can only be recycled in certain
-drop-off points, some can be left at specific store locations, and even others are not
-available for recycling at all. With the hopes of making a product to help the city’s
-residents become more eco-friendly and the city’s recycling opportunities become more
-accessible they invented Salvager.
-"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        android:background="@color/gray"
-        android:layout_below="@+id/ImageRight"
-        android:layout_alignParentEnd="true"/>
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@id/textLeft"
-            android:text="Our Mission: \n
-            Salvager exists to educate and raise awareness of recycling for Savannah
-residents. By simplifying the recycling process for consumers,
-we believe people will be able to lessen their impact on the environment and
-understand how easy it is to recycle. Although Salvager only exists at the city
-level for now, with enough people working together, we can change the world for
-the better."/>
+            android:layout_height="@android:dimen/thumbnail_height"
+            android:layout_below="@+id/titleRight"
+            android:layout_alignStart="@+id/split"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:background="@color/gray"
+            android:text="Our information"
+            android:textAlignment="center"
+            android:textSize="20sp" />
 
-"
 
-            android:textSize="25sp"
-            android:textColor="@color/black"/>
 
 
     </RelativeLayout>
