@@ -21,7 +21,7 @@
             android:id="@+id/title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Our Mission:"
+            android:text="Our Mission: Simplifying the recycling process for Savannah residents for a greener environment."
             android:textSize="30sp"
             android:textColor="@color/black"
             android:textStyle="bold"/>
@@ -31,8 +31,7 @@
             android:layout_height="match_parent"
             android:layout_below="@+id/title"
             android:text="
-        Salvager exists to educate and raise awareness of recycling for Savannah
-residents. By simplifying the recycling process for consumers,
+    By simplifying the recycling process for consumers,
 we believe people will be able to lessen their impact on the environment and
 understand how easy it is to recycle. Although Salvager only exists at the city
 level for now, with enough people working together, we can change the world for the better."
@@ -131,9 +130,16 @@ accessible they invented Salvager."
             android:layout_alignParentEnd="true"
             android:layout_marginTop="10dp"
             android:background="@color/gray"
-            android:text="Our information"
-            android:textAlignment="center"
-            android:textSize="20sp" />
+            android:text="Brower Zhang: \n
+    Email: brower.zhang@students.sccpss.com \n
+    Phone: (912) 247-4266 \n \n
+Jorge Aguilar: \n
+    Email: jorge.aguilar@students.sccpss.com \n
+    Phone: (912) 507-9733 \n \n
+Isabella Millan Merchan \n
+    Email: isabella.millanmerchan@students.sccpss.com \n
+    Phone: (470) 351-1674"
+            android:textSize="12sp" />
 
 
 
