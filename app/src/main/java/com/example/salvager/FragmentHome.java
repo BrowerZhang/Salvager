@@ -14,9 +14,6 @@ public class FragmentHome extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragmenthome_layout,container,false);
-
-        getActivity().getActionBar().hide();
-
         return rootView;
     }
 }
