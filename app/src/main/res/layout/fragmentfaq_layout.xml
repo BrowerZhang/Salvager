@@ -12,27 +12,6 @@
         android:layout_width="1dp"
         android:layout_height="match_parent"
         android:layout_centerInParent="true"/>
-    <TextView
-        android:id="@+id/title"
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        android:text="Frequently Asked Questions:" />
-    <TextView
-        android:id="@+id/qna"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:layout_below="@+id/title"
-        android:text=" Question: Answer\n
-Question: Answer\n
-Question: Answer\n
-Question: Answer\n
-Question: Answer"
-        android:textSize="20sp"
-        android:layout_marginTop="10dp"
-        android:background="@color/gray"/>
 
     <TextView
         android:id="@+id/titleLeft"
@@ -44,8 +23,7 @@ Question: Answer"
         android:layout_marginTop="10dp"
         android:textColor="@color/black"
         android:gravity="center"
-        android:text="Contact An Expert!"
-        android:layout_below="@+id/qna" />
+        android:text="Contact An Expert!" />
 
     <ImageView
         android:id="@+id/ImageLeft"
@@ -62,6 +40,7 @@ Question: Answer"
         android:layout_alignEnd="@+id/split"
         android:layout_marginTop="10dp"
         android:text="Expert Information"
+        android:textAlignment="center"
         android:textSize="20sp"
         android:background="@color/gray"
         android:layout_below="@+id/ImageLeft"/>
@@ -77,7 +56,6 @@ Question: Answer"
         android:textColor="@color/black"
         android:gravity="center"
         android:text="Contact Us!"
-        android:layout_below="@+id/qna"
         android:layout_alignParentEnd="true"/>
 
     <ImageView
@@ -94,6 +72,7 @@ Question: Answer"
         android:layout_alignStart="@+id/split"
         android:layout_marginTop="10dp"
         android:text="Our Information"
+        android:textAlignment="center"
         android:textSize="20sp"
         android:background="@color/gray"
         android:layout_below="@+id/ImageRight"
