@@ -15,7 +15,7 @@
         android:text="Chatham County Resource Conservation and Recycling Education Center"
         android:textSize="29sp"
         android:textStyle="bold"
-        android:background="@color/red2"
+        android:background="@color/green"
         android:textColor="@color/white"
         android:id="@+id/top"/>
 
