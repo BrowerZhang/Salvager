@@ -4,9 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ActivityChevis"
-    android:paddingRight="16dp"
-    android:paddingLeft="16dp">
+    tools:context=".ActivityChevis">
 
     <TextView
         android:layout_width="match_parent"
@@ -27,7 +25,9 @@
         android:text="Address: 610 Chevis Road, Savannah, GA \nHours: Tuesday - Saturday 8:30 to 5:00"
         android:textSize="20sp"
         android:textColor="@color/black"
-        android:id="@+id/middle"/>
+        android:id="@+id/middle"
+        android:paddingRight="12dp"
+        android:paddingLeft="12dp"/>
 
 
     <TextView
@@ -44,7 +44,9 @@
     - Cans (Cleaned soup or food) \n
     - Plastics 1 and 2 (clear bottle, Milk Jug, and Detergent bottle) \n"
         android:textSize="15sp"
-        android:textColor="@color/black"/>
+        android:textColor="@color/black"
+        android:paddingRight="12dp"
+        android:paddingLeft="12dp"/>
 
 
 

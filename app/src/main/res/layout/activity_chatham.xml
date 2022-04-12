@@ -4,9 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ActivityChatham"
-    android:paddingRight="16dp"
-    android:paddingLeft="16dp">
+    tools:context=".ActivityChatham">
 
     <TextView
         android:layout_width="match_parent"
@@ -17,7 +15,8 @@
         android:textStyle="bold"
         android:background="@color/green"
         android:textColor="@color/white"
-        android:id="@+id/top"/>
+        android:id="@+id/top"
+        />
 
     <TextView
         android:id="@+id/middle"
@@ -27,7 +26,9 @@
         android:layout_marginTop="10dp"
         android:text="Address: 1321 Eisenhower Dr, Savannah, GA 31406 \nHours: Tuesday – Saturday 8:30 to 5:00"
         android:textColor="@color/black"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:paddingRight="12dp"
+        android:paddingLeft="12dp"/>
 
 
     <TextView
@@ -55,7 +56,9 @@
     - Mobile phones \n
     - Plastic shopping bags"
         android:textSize="15sp"
-        android:textColor="@color/black"/>
+        android:textColor="@color/black"
+        android:paddingRight="12dp"
+        android:paddingLeft="12dp"/>
 
 
 </RelativeLayout>

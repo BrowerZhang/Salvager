@@ -4,9 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ActivityWilmington"
-    android:paddingRight="16dp"
-    android:paddingLeft="16dp">
+    tools:context=".ActivityWilmington">
 
     <TextView
         android:layout_width="match_parent"
@@ -27,7 +25,9 @@
         android:text="Address: 7022 Concord Road, Savannah, GA \nHours: Monday – Saturday 8:30 to 5:00 | Sunday 12:00 to 5:00"
         android:textSize="20sp"
         android:textColor="@color/black"
-        android:id="@+id/middle"/>
+        android:id="@+id/middle"
+        android:paddingRight="12dp"
+        android:paddingLeft="12dp"/>
 
 
     <TextView
@@ -46,6 +46,8 @@
     - Used Cooking Oil \n
     - Used Motor Oil"
         android:textSize="15sp"
-        android:textColor="@color/black"/>
+        android:textColor="@color/black"
+        android:paddingRight="12dp"
+        android:paddingLeft="12dp"/>
 
 </RelativeLayout>
