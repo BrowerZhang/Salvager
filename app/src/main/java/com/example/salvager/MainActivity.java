@@ -15,21 +15,11 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
-    ListView listView;
-    String [] searchResults = {"milk carton", "watter bottles"};
-
-    ArrayAdapter<String> arrayAdapter;
-
     BottomNavigationView bottomNavigationView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        listView = findViewById(R.id.list);
-
-        arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,searchResults);
-        listView.setAdapter(arrayAdapter);
 
         getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer, new FragmentHome()).commit();
 
@@ -79,30 +69,5 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
 
-        getMenuInflater().inflate(R.menu.searches,menu);
-
-        MenuItem menuItem = menu.findItem(R.id.action_search);
-        SearchView searchView = (SearchView) menuItem.getActionView();
-        searchView.setQueryHint("Type to search your recyclable item");
-
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-                return false;
-            }
-
-            @Override
-            public boolean onQueryTextChange(String newText) {
-
-                arrayAdapter.getFilter().filter(newText);
-
-                return false;
-            }
-        });
-
-        return super.onCreateOptionsMenu(menu);
-    }
 }
