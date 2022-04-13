@@ -10,7 +10,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-
     <TextView
         android:id="@+id/split"
         android:layout_width="1dp"
@@ -21,15 +20,26 @@
             android:id="@+id/title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Our Mission: Simplifying the recycling process for Savannah residents for a greener environment."
+            android:text="Our Mission:"
             android:textSize="30sp"
             android:textColor="@color/black"
             android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/title2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/title"
+            android:text="Simplifying the recycling process for Savannah residents for a greener environment."
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
         <TextView
             android:id="@+id/summary"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@+id/title"
+            android:layout_below="@+id/title2"
             android:text="
     By simplifying the recycling process for consumers,
 we believe people will be able to lessen their impact on the environment and
@@ -46,6 +56,7 @@ level for now, with enough people working together, we can change the world for 
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:background="@color/black"/>
+
         <TextView
             android:id="@+id/aboutUs"
             android:layout_width="match_parent"
@@ -55,6 +66,7 @@ level for now, with enough people working together, we can change the world for 
             android:textSize="25sp"
             android:textColor="@color/black"
             android:textStyle="bold"/>
+
         <TextView
             android:id="@+id/aboutUsSum"
             android:layout_width="match_parent"
@@ -69,8 +81,8 @@ drop-off points, some can be left at specific store locations, and even others a
 available for recycling at all. With the hopes of making a product to help the city’s
 residents become more eco-friendly and the city’s recycling opportunities become more
 accessible they invented Salvager."
-            android:textSize="15sp"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black"
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/horizontalSplit2"
@@ -80,6 +92,7 @@ accessible they invented Salvager."
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:background="@color/black"/>
+
     <TextView
         android:id="@+id/titleLeft"
         android:layout_width="match_parent"
@@ -88,24 +101,21 @@ accessible they invented Salvager."
         android:layout_below="@+id/horizontalSplit2"
         android:textSize="19sp"
         android:textStyle="bold"
-        android:layout_marginTop="10dp"
         android:textColor="@color/black"
         android:gravity="center"
         android:text="Contact An Expert!" />
 
-
-
-    <TextView
-        android:id="@+id/textLeft"
-        android:layout_width="match_parent"
-        android:layout_height="@android:dimen/thumbnail_height"
-        android:layout_alignEnd="@+id/split"
-        android:layout_marginTop="10dp"
-        android:text="Expert Information"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        android:background="@color/gray"
-        android:layout_below="@+id/titleLeft"/>
+        <TextView
+            android:id="@+id/textLeft"
+            android:layout_width="match_parent"
+            android:layout_height="215dp"
+            android:layout_below="@+id/titleLeft"
+            android:layout_alignEnd="@+id/split"
+            android:layout_marginTop="10dp"
+            android:background="@color/gray"
+            android:text="Expert Information"
+            android:textAlignment="center"
+            android:textSize="20sp" />
 
     <TextView
         android:id="@+id/titleRight"
@@ -115,16 +125,15 @@ accessible they invented Salvager."
         android:layout_below="@+id/horizontalSplit2"
         android:textSize="19sp"
         android:textStyle="bold"
-        android:layout_marginTop="10dp"
         android:textColor="@color/black"
         android:gravity="center"
         android:text="Contact Us!"
         android:layout_alignParentEnd="true"/>
 
-
         <TextView
+            android:id="@+id/textRight"
             android:layout_width="match_parent"
-            android:layout_height="@android:dimen/thumbnail_height"
+            android:layout_height="215dp"
             android:layout_below="@+id/titleRight"
             android:layout_alignStart="@+id/split"
             android:layout_alignParentEnd="true"
@@ -139,10 +148,14 @@ Jorge Aguilar: \n
 Isabella Millan Merchan \n
     Email: isabella.millanmerchan@students.sccpss.com \n
     Phone: (470) 351-1674"
-            android:textSize="12sp" />
+            android:textSize="12sp"
+            android:textColor="@color/black"/>
 
-
-
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/textRight"
+            android:background="@color/white"/>
 
     </RelativeLayout>
 </ScrollView>
