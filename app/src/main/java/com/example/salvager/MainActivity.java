@@ -16,20 +16,18 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class MainActivity extends AppCompatActivity {
 
     ListView listView;
-    String [] searchResults = {"milk carton", "watter bottles"};
+    String[] name = {"milk container", "egg carton", "water bottle"};
 
     ArrayAdapter<String> arrayAdapter;
 
+
     BottomNavigationView bottomNavigationView;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        listView = findViewById(R.id.list);
-
-        arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,searchResults);
-        listView.setAdapter(arrayAdapter);
 
         getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer, new FragmentHome()).commit();
 
@@ -77,6 +75,12 @@ public class MainActivity extends AppCompatActivity {
 
 
         });
+
+        listView = findViewById(R.id.listview);
+
+        arrayAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,name);
+        listView.setAdapter(arrayAdapter);
+
     }
 
     @Override
