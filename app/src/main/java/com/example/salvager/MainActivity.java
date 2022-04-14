@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -80,6 +81,7 @@ public class MainActivity extends AppCompatActivity {
 
         arrayAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,searches);
         listView.setAdapter(arrayAdapter);
+
 
     }
 
