@@ -16,7 +16,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class MainActivity extends AppCompatActivity {
 
     ListView listView;
-    String[] name = {"milk container", "egg carton", "water bottle"};
+    String[] searches = {"milk container", "egg carton", "water bottle"};
 
     ArrayAdapter<String> arrayAdapter;
 
@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
 
         listView = findViewById(R.id.listview);
 
-        arrayAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,name);
+        arrayAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,searches);
         listView.setAdapter(arrayAdapter);
 
     }
