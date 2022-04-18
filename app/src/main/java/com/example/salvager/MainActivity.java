@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -81,6 +82,7 @@ public class MainActivity extends AppCompatActivity {
 
         arrayAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,searches);
         listView.setAdapter(arrayAdapter);
+        listView.setVisibility(View.INVISIBLE);
 
 
     }
@@ -97,6 +99,9 @@ public class MainActivity extends AppCompatActivity {
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
+
+                listView.setVisibility(View.VISIBLE);
+
                 return false;
             }
 
@@ -104,9 +109,10 @@ public class MainActivity extends AppCompatActivity {
             public boolean onQueryTextChange(String newText) {
 
                 arrayAdapter.getFilter().filter(newText);
-
+                listView.setVisibility(View.INVISIBLE);
                 return false;
             }
+
         });
 
         return super.onCreateOptionsMenu(menu);
