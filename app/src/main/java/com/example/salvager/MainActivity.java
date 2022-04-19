@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -20,7 +21,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class MainActivity extends AppCompatActivity {
 
     ListView listView;
-    String[] searches = {"milk container", "egg carton", "water bottle"};
+    String[] searches = {"milk carton", "egg carton",};
 
     ArrayAdapter<String> arrayAdapter;
 
@@ -90,7 +91,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
 
-                Toast.makeText(MainActivity.this, "This item is: " + arrayAdapter.getItem(position), Toast.LENGTH_SHORT).show();
+                if(position == 0) {
+                    //open milk carton activity
+
+                    startActivity(new Intent(MainActivity.this,EggCartonActivity.class));
+                }
+                else if(position == 1)
+                {
+                    //open egg carton activity
+                    startActivity(new Intent(MainActivity.this,MilkCartonActivity.class));
+                }
             }
         });
 
