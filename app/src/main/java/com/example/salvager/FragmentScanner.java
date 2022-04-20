@@ -109,6 +109,20 @@ public class FragmentScanner extends Fragment {
 
             String[] classes = {"milk jug", "water bottle", "egg carton"};
 
+
+            if (maxPos == 0){
+                Intent intent = new Intent(getActivity(), MilkCartonActivity.class);
+                startActivity(intent);
+            }
+            if (maxPos == 1){
+                Intent intent = new Intent(getActivity(), EggCartonActivity.class);
+                startActivity(intent);
+            }
+            if (maxPos == 2){
+                Intent intent = new Intent(getActivity(), MilkCartonActivity.class);
+                startActivity(intent);
+            }
+
             result.setText(classes[maxPos]);
 
             String s = "";
