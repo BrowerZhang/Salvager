@@ -10,11 +10,9 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -94,12 +92,12 @@ public class MainActivity extends AppCompatActivity {
                 if(position == 0) {
                     //open milk carton activity
 
-                    startActivity(new Intent(MainActivity.this,EggCartonActivity.class));
+                    startActivity(new Intent(MainActivity.this, ActivityEggCarton.class));
                 }
                 else if(position == 1)
                 {
                     //open egg carton activity
-                    startActivity(new Intent(MainActivity.this,MilkCartonActivity.class));
+                    startActivity(new Intent(MainActivity.this, ActivityMilkCarton.class));
                 }
             }
         });

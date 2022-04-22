@@ -111,15 +111,15 @@ public class FragmentScanner extends Fragment {
 
 
             if (maxPos == 0){
-                Intent intent = new Intent(getActivity(), MilkCartonActivity.class);
+                Intent intent = new Intent(getActivity(), ActivityMilkCarton.class);
                 startActivity(intent);
             }
             if (maxPos == 1){
-                Intent intent = new Intent(getActivity(), EggCartonActivity.class);
+                Intent intent = new Intent(getActivity(), ActivityEggCarton.class);
                 startActivity(intent);
             }
             if (maxPos == 2){
-                Intent intent = new Intent(getActivity(), MilkCartonActivity.class);
+                Intent intent = new Intent(getActivity(), ActivityMilkCarton.class);
                 startActivity(intent);
             }
 

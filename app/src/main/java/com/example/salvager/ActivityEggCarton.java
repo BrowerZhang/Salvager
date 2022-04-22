@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class MilkCartonActivity extends AppCompatActivity {
+public class ActivityEggCarton extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_milk_carton);
+        setContentView(R.layout.activity_egg_carton);
     }
 }

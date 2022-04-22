@@ -5,7 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -15,10 +15,46 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Salvager">
         <activity
-            android:name=".EggCartonActivity"
+            android:name=".ActivityPrescriptionDrug"
             android:exported="false" />
         <activity
-            android:name=".MilkCartonActivity"
+            android:name=".ActivityPaint"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityScrapMetal"
+            android:exported="false" />
+        <activity
+            android:name=".ActivitySoupCan"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityCardboard"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityBattery"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityGlassBottle"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityBabyBottle"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityKetchupBottle"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityShoppingBag"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityDetergentBottles"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityWaterBottle"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityEggCarton"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityMilkCarton"
             android:exported="false" />
         <activity
             android:name=".ActivityChevis"

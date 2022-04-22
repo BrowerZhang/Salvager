@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ActivityMilkCarton"
+    tools:context=".ActivityPrescriptionDrug"
     android:paddingTop="10dp"
     android:paddingLeft="12dp"
     android:paddingRight="12dp">
@@ -78,6 +78,5 @@
         android:text="Other Ways to Reuse: "
         android:textSize="30sp"
         android:textColor="@color/black"/>
-
 
 </RelativeLayout>
