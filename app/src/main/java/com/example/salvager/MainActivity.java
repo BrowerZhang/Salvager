@@ -19,7 +19,8 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class MainActivity extends AppCompatActivity {
 
     ListView listView;
-    String[] searches = {"milk carton", "egg carton",};
+    String[] searches = {"Water Bottles", "Milk Carton", "Detergent Bottles", "Shopping Bags", "Ketchup Bottles", "Egg Carton", "Baby Bottles",
+            "Glass Bottle", "Batteries", "Cardboard", "Soup Can", "Scrap Metal", "Paint", "Prescription Drugs"};
 
     ArrayAdapter<String> arrayAdapter;
 
@@ -89,15 +90,61 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
 
-                if(position == 0) {
-                    //open milk carton activity
-
+                if(arrayAdapter.getItem(position).equalsIgnoreCase(searches[0]))
+                {
+                    startActivity(new Intent(MainActivity.this, ActivityWaterBottle.class));
+                }
+                else if (arrayAdapter.getItem(position).equalsIgnoreCase(searches[1]))
+                {
+                    startActivity(new Intent(MainActivity.this, ActivityMilkCarton.class));
+                }
+                else if (arrayAdapter.getItem(position).equalsIgnoreCase(searches[2]))
+                {
+                    startActivity(new Intent(MainActivity.this, ActivityDetergentBottles.class));
+                }
+                else if (arrayAdapter.getItem(position).equalsIgnoreCase(searches[3]))
+                {
+                    startActivity(new Intent(MainActivity.this, ActivityShoppingBag.class));
+                }
+                else if (arrayAdapter.getItem(position).equalsIgnoreCase(searches[4]))
+                {
+                    startActivity(new Intent(MainActivity.this, ActivityKetchupBottle.class));
+                }
+                else if (arrayAdapter.getItem(position).equalsIgnoreCase(searches[5]))
+                {
                     startActivity(new Intent(MainActivity.this, ActivityEggCarton.class));
                 }
-                else if(position == 1)
+                else if (arrayAdapter.getItem(position).equalsIgnoreCase(searches[6]))
                 {
-                    //open egg carton activity
-                    startActivity(new Intent(MainActivity.this, ActivityMilkCarton.class));
+                    startActivity(new Intent(MainActivity.this, ActivityBabyBottle.class));
+                }
+                else if (arrayAdapter.getItem(position).equalsIgnoreCase(searches[7]))
+                {
+                    startActivity(new Intent(MainActivity.this, ActivityGlassBottle.class));
+                }
+                else if (arrayAdapter.getItem(position).equalsIgnoreCase(searches[8]))
+                {
+                    startActivity(new Intent(MainActivity.this, ActivityBattery.class));
+                }
+                else if (arrayAdapter.getItem(position).equalsIgnoreCase(searches[9]))
+                {
+                    startActivity(new Intent(MainActivity.this, ActivityCardboard.class));
+                }
+                else if (arrayAdapter.getItem(position).equalsIgnoreCase(searches[10]))
+                {
+                    startActivity(new Intent(MainActivity.this, ActivitySoupCan.class));
+                }
+                else if (arrayAdapter.getItem(position).equalsIgnoreCase(searches[11]))
+                {
+                    startActivity(new Intent(MainActivity.this, ActivityScrapMetal.class));
+                }
+                else if (arrayAdapter.getItem(position).equalsIgnoreCase(searches[12]))
+                {
+                    startActivity(new Intent(MainActivity.this, ActivityPaint.class));
+                }
+                else if (arrayAdapter.getItem(position).equalsIgnoreCase(searches[13]))
+                {
+                    startActivity(new Intent(MainActivity.this, ActivityPrescriptionDrug.class));
                 }
             }
         });
