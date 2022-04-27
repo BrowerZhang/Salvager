@@ -20,8 +20,8 @@
         android:id="@+id/ImageLogo"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:layout_centerInParent="true"
         android:layout_below="@+id/top"
+        android:layout_centerInParent="true"
         android:layout_marginTop="25dp"
         android:src="@drawable/recycle_logo" />
 
