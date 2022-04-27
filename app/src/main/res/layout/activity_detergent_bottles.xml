@@ -55,7 +55,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/information"
-        android:text="Recycling Number:  3 PVC (Polyvinyl Chloride)"
+        android:text="Recycling Number: 3 PVC (Polyvinyl Chloride)"
         android:textSize="15sp"
         android:textColor="@color/black"/>
 
