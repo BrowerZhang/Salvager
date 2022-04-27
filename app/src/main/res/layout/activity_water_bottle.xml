@@ -151,6 +151,7 @@
             android:layout_height="200dp"
             android:layout_below="@+id/waysToReuse"
             android:layout_marginTop="0dp"
+            android:layout_centerInParent="true"
             android:src="@drawable/wb_storage" />
 
     <TextView
@@ -168,6 +169,7 @@
             android:layout_height="200dp"
             android:layout_below="@+id/waysToReuse2"
             android:layout_marginTop="0dp"
+            android:layout_centerInParent="true"
             android:src="@drawable/wb_vase" />
 
     </RelativeLayout>
