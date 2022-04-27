@@ -23,7 +23,7 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
-import com.example.salvager.ml.Model;
+import com.example.salvager.ml.ModelUnquant;
 
 import org.tensorflow.lite.DataType;
 import org.tensorflow.lite.support.tensorbuffer.TensorBuffer;
@@ -71,7 +71,7 @@ public class FragmentScanner extends Fragment {
 
     public void classifyImage(Bitmap image){
         try {
-            Model model = Model.newInstance(getActivity().getApplicationContext());
+            ModelUnquant model = ModelUnquant.newInstance(getActivity().getApplicationContext());
 
             // Creates inputs for reference.
             TensorBuffer inputFeature0 = TensorBuffer.createFixedSize(new int[]{1, 224, 224, 3}, DataType.FLOAT32);
@@ -92,10 +92,10 @@ public class FragmentScanner extends Fragment {
 
             inputFeature0.loadBuffer(byteBuffer);
 
-
             // Runs model inference and gets result.
-            Model.Outputs outputs = model.process(inputFeature0);
+            ModelUnquant.Outputs outputs = model.process(inputFeature0);
             TensorBuffer outputFeature0 = outputs.getOutputFeature0AsTensorBuffer();
+
 
             float[] confidences = outputFeature0.getFloatArray();
             int maxPos = 0;
@@ -107,36 +107,83 @@ public class FragmentScanner extends Fragment {
                 }
             }
 
-            String[] classes = {"milk jug", "water bottle", "egg carton"};
+            String[] classes = {"Water Bottle", "Milk Jug", "Detergent Bottle", "Shopping Bag", "Ketchup Bottle", "Egg Carton",
+            "Glass Bottle", "Battery", "Cardboard", "Soup Cans", "Baby Bottle", "Paint", "Prescription drug", "Scrap Metal"};
 
 
             if (maxPos == 0){
+                Intent intent = new Intent(getActivity(), ActivityWaterBottle.class);
+                startActivity(intent);
+            }
+            else if (maxPos == 1)
+            {
                 Intent intent = new Intent(getActivity(), ActivityMilkCarton.class);
                 startActivity(intent);
             }
-            if (maxPos == 1){
+            else if (maxPos == 2){
+                Intent intent = new Intent(getActivity(), ActivityDetergentBottles.class);
+                startActivity(intent);
+            }
+            else if (maxPos == 3){
+                Intent intent = new Intent(getActivity(), ActivityShoppingBag.class);
+                startActivity(intent);
+            }
+            else if (maxPos == 4){
+                Intent intent = new Intent(getActivity(), ActivityKetchupBottle.class);
+                startActivity(intent);
+            }
+            else if (maxPos == 5){
                 Intent intent = new Intent(getActivity(), ActivityEggCarton.class);
                 startActivity(intent);
             }
-            if (maxPos == 2){
-                Intent intent = new Intent(getActivity(), ActivityMilkCarton.class);
+            else if (maxPos == 6){
+                Intent intent = new Intent(getActivity(), ActivityGlassBottle.class);
+                startActivity(intent);
+            }
+            else if (maxPos == 7){
+                Intent intent = new Intent(getActivity(), ActivityBattery.class);
+                startActivity(intent);
+            }
+            else if (maxPos == 8){
+                Intent intent = new Intent(getActivity(), ActivityCardboard.class);
+                startActivity(intent);
+            }
+            else if (maxPos == 9){
+                Intent intent = new Intent(getActivity(), ActivitySoupCan.class);
+                startActivity(intent);
+            }
+            else if (maxPos == 10){
+                Intent intent = new Intent(getActivity(), ActivityBabyBottle.class);
+                startActivity(intent);
+            }
+            else if (maxPos == 11){
+                Intent intent = new Intent(getActivity(), ActivityPaint.class);
+                startActivity(intent);
+            }
+            else if (maxPos == 12){
+                Intent intent = new Intent(getActivity(), ActivityPrescriptionDrug.class);
+                startActivity(intent);
+            }
+            else if (maxPos == 13){
+                Intent intent = new Intent(getActivity(), ActivityScrapMetal.class);
                 startActivity(intent);
             }
 
             result.setText(classes[maxPos]);
 
             String s = "";
-            for (int i = 0; i < classes.length; i++){
-                s += String.format("%s: %.1f%%\n", classes[i],confidences[i] *100);
-            }
+            s += String.format("%s: %.1f%%\n", classes[maxPos],confidences[maxPos] *100);
             confidence.setText(s);
+
 
             // Releases model resources if no longer used.
             model.close();
         } catch (IOException e) {
             // TODO Handle the exception
         }
+
     }
+
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
