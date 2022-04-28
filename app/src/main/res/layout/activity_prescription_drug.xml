@@ -23,7 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/product"
-        android:text="Recyclable: "
+        android:text="Recyclable: No"
         android:textSize="15sp"
         android:textColor="@color/black"/>
 
