@@ -23,13 +23,15 @@
         android:layout_below="@+id/top"
         android:layout_centerInParent="true"
         android:layout_marginTop="25dp"
-        android:src="@drawable/recycle_logo" />
+        android:src="@drawable/salvager_logo" />
+
 
     <TextView
         android:id="@+id/bottom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Slogan"
+        android:text="Like a good neighbor,
+        Salvager is there"
         android:textAlignment="center"
         android:textSize="30dp"
         android:layout_below="@+id/ImageLogo"
