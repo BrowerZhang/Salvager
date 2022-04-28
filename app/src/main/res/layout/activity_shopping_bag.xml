@@ -51,7 +51,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/information"
-        android:text="Recycling Number: 3 PVC (Polyvinyl Chloride)"
+        android:text="Recycling Number: 4 LDPE (Low-Density Polyethylene)
+"
         android:textSize="15sp"
         android:textColor="@color/black"/>
 
@@ -106,7 +107,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/howToRecycle2"
-        android:text="- sample text"
+        android:text="- Services: Savannah (City Government Service)"
         android:textSize="15sp"
         android:textColor="@color/black"/>
 
@@ -134,8 +135,35 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/Reuse"
-        android:text="- sample text"
+        android:text="- Shopping Bag Trash Liner"
         android:textSize="15sp"
         android:textColor="@color/black"/>
+
+    <ImageView
+        android:id="@+id/waysToReuseImage"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/waysToReuse"
+        android:layout_marginTop="0dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/pb_trash" />
+
+    <TextView
+        android:id="@+id/waysToReuse2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/waysToReuseImage"
+        android:text="- Shopping Bag Poop Picker-Upper"
+        android:textSize="15sp"
+        android:textColor="@color/black"/>
+
+    <ImageView
+        android:id="@+id/waysToReuseImage2"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/waysToReuse2"
+        android:layout_marginTop="0dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/pb_poop" />
 
 </RelativeLayout>
