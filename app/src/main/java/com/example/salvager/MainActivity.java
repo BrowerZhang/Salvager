@@ -19,8 +19,8 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class MainActivity extends AppCompatActivity {
 
     ListView listView;
-    String[] searches = {"Water Bottles", "Milk Carton", "Detergent Bottles", "Shopping Bags", "Ketchup Bottles", "Egg Carton", "Baby Bottles",
-            "Glass Bottle", "Batteries", "Cardboard", "Soup Can", "Scrap Metal", "Paint", "Prescription Drugs"};
+    String[] searches = {"Water Bottles", "Milk Carton", "Detergent Bottles", "Shopping Bags", "Ketchup Bottles", "Plastic Egg Carton", "Baby Bottles",
+            "Glass Bottle", "Batteries + Automotive Batteries", "Cardboard", "Soup Can", "Scrap Metal", "Paint", "Prescription Drugs"};
 
     ArrayAdapter<String> arrayAdapter;
 

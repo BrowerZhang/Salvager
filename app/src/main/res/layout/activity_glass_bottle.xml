@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,6 +9,9 @@
     android:paddingLeft="12dp"
     android:paddingRight="12dp">
 
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
     <TextView
         android:id="@+id/product"
         android:layout_width="wrap_content"
@@ -23,7 +26,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/product"
-        android:text="Recyclable: "
+        android:text="Recyclable: Yes"
         android:textSize="15sp"
         android:textColor="@color/black"/>
 
@@ -51,7 +54,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/information"
-        android:text="Recycling Number: "
+        android:text="Three differing types of glass bottles (all are recyclable):
+\n- Number 70: Clear Glass
+\n- Number 71: Green Bottles
+\n- Number 72: Brown Bottles
+"
         android:textSize="15sp"
         android:textColor="@color/black"/>
 
@@ -88,7 +95,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/howToRecycle"
-        android:text="-sample text"
+        android:text="- No Locations"
         android:textSize="15sp"
         android:textColor="@color/black"/>
 
@@ -106,7 +113,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/howToRecycle2"
-        android:text="- sample text"
+        android:text="- Savannah (City Government Service)"
         android:textSize="15sp"
         android:textColor="@color/black"/>
 
@@ -129,13 +136,41 @@
         android:textSize="30sp"
         android:textColor="@color/black"/>
 
-    <TextView
-        android:id="@+id/waysToReuse"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/Reuse"
-        android:text="- sample text"
-        android:textSize="15sp"
-        android:textColor="@color/black"/>
+        <TextView
+            android:id="@+id/waysToReuse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Reuse"
+            android:text="- Glass Bottle Vase"
+            android:textSize="15sp"
+            android:textColor="@color/black"/>
 
-</RelativeLayout>
+        <ImageView
+            android:id="@+id/waysToReuseImage"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@+id/waysToReuse"
+            android:layout_marginTop="0dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/gb_vase" />
+
+        <TextView
+            android:id="@+id/waysToReuse2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/waysToReuseImage"
+            android:text="- Glass Bottle Container"
+            android:textSize="15sp"
+            android:textColor="@color/black"/>
+
+        <ImageView
+            android:id="@+id/waysToReuseImage2"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@+id/waysToReuse2"
+            android:layout_marginTop="0dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/gb_container" />
+
+    </RelativeLayout>
+</ScrollView>
