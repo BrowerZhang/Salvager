@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     >
 
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
     <TextView
         android:id="@+id/top"
         android:layout_width="match_parent"
@@ -16,14 +19,47 @@
         android:background="@color/green"
         />
 
-    <ImageView
-        android:id="@+id/ImageLogo"
+
+        <ImageView
+            android:id="@+id/ImageLogo"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@+id/top"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="25dp"
+            android:src="@drawable/salvager_logo" />
+
+    <TextView
+        android:id="@+id/title"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_below="@+id/top"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ImageLogo"
+        android:textAlignment="center"
+        android:text="Our Mission:"
+        android:textSize="30sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginTop="12dp"/>
+
+    <TextView
+        android:id="@+id/title2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:text="Simplifying the recycling process for Savannah residents for a greener environment."
+        android:textSize="15sp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
+
+    <ImageView
+        android:id="@+id/savannah"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title2"
         android:layout_centerInParent="true"
         android:layout_marginTop="25dp"
-        android:src="@drawable/salvager_logo" />
+        android:src="@drawable/savannah_city" />
 
 
     <TextView
@@ -33,9 +69,19 @@
         android:text="Like a good neighbor,
         Salvager is there"
         android:textAlignment="center"
-        android:textSize="30dp"
-        android:layout_below="@+id/ImageLogo"
+        android:textSize="30sp"
+        android:layout_below="@+id/savannah"
         android:layout_marginTop="25dp"
         />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/bottom"
+            android:background="@color/white" />
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
 
-</RelativeLayout>
+    </RelativeLayout>
+</ScrollView>

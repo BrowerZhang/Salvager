@@ -25,21 +25,13 @@
             android:textColor="@color/black"
             android:textStyle="bold"/>
 
-        <TextView
-            android:id="@+id/title2"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@+id/title"
-            android:text="Simplifying the recycling process for Savannah residents for a greener environment."
-            android:textSize="15sp"
-            android:textColor="@color/black"
-            android:textStyle="bold"/>
+
 
         <TextView
             android:id="@+id/summary"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@+id/title2"
+            android:layout_below="@+id/title"
             android:text="
     By simplifying the recycling process for consumers,
 we believe people will be able to lessen their impact on the environment and
