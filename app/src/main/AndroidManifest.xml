@@ -15,9 +15,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Salvager">
         <activity
-            android:name=".ActivityPrescriptionDrug"
-            android:exported="false" />
-        <activity
             android:name=".ActivityPaint"
             android:exported="false" />
         <activity
