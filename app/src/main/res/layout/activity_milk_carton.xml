@@ -17,7 +17,7 @@
         android:id="@+id/product"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Product: Milk Carton"
+        android:text="Product: Milk Jug"
         android:textSize="30sp"
         android:textStyle="bold"
         android:textColor="@color/black"/>
@@ -141,7 +141,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/Reuse"
-            android:text="- Milk Carton Planter"
+            android:text="- Milk Jug Planter"
             android:textSize="15sp"
             android:textColor="@color/black"/>
 
@@ -159,7 +159,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/waysToReuseImage"
-            android:text="- Milk Carton Scoop"
+            android:text="- Milk Jug Scoop"
             android:textSize="15sp"
             android:textColor="@color/black"/>
 

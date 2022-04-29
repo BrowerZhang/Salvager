@@ -19,7 +19,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class MainActivity extends AppCompatActivity {
 
     ListView listView;
-    String[] searches = {"Water Bottles", "Milk Carton", "Detergent Bottles", "Plastic Shopping Bags", "Ketchup Bottles", "Plastic Egg Carton", "Baby Bottles",
+    String[] searches = {"Water Bottles", "Milk Jug", "Detergent Bottles", "Plastic Shopping Bags", "Ketchup Bottles", "Plastic Egg Carton", "Baby Bottles",
             "Glass Bottle", "Batteries + Automotive Batteries", "Cardboard", "Soup Can", "Scrap Metal", "Paint"};
 
     ArrayAdapter<String> arrayAdapter;
@@ -155,7 +155,7 @@ public class MainActivity extends AppCompatActivity {
 
         MenuItem menuItem = menu.findItem(R.id.action_search);
         SearchView searchView = (SearchView) menuItem.getActionView();
-        searchView.setQueryHint("Type to search your recyclable item");
+        searchView.setQueryHint("Search your recyclable item");
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
