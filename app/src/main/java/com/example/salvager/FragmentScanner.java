@@ -108,8 +108,7 @@ public class FragmentScanner extends Fragment {
             }
 
             String[] classes = {"Water Bottle", "Milk Jug", "Detergent Bottle", "Shopping Bag", "Ketchup Bottle", "Egg Carton",
-            "Glass Bottle", "Battery", "Cardboard", "Soup Cans", "Baby Bottle", "Paint", "Prescription drug", "Scrap Metal"};
-
+            "Glass Bottle", "Battery", "Cardboard", "Soup Cans", "Baby Bottle", "Paint", "Scrap Metal"};
 
             if (maxPos == 0){
                 Intent intent = new Intent(getActivity(), ActivityWaterBottle.class);
@@ -161,10 +160,6 @@ public class FragmentScanner extends Fragment {
                 startActivity(intent);
             }
             else if (maxPos == 12){
-                Intent intent = new Intent(getActivity(), ActivityPrescriptionDrug.class);
-                startActivity(intent);
-            }
-            else if (maxPos == 13){
                 Intent intent = new Intent(getActivity(), ActivityScrapMetal.class);
                 startActivity(intent);
             }

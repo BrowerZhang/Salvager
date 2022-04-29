@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     >
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/split"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"/>
+
+
     <TextView
         android:id="@+id/top"
         android:layout_width="match_parent"
@@ -25,7 +34,6 @@
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_below="@+id/top"
-            android:layout_centerInParent="true"
             android:layout_marginTop="25dp"
             android:src="@drawable/salvager_logo" />
 
@@ -57,31 +65,181 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/title2"
-        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="25dp"
+        android:layout_marginBottom="25dp"
         android:src="@drawable/savannah_city" />
 
 
-    <TextView
-        android:id="@+id/bottom"
-        android:layout_width="match_parent"
+
+    <ImageView
+        android:id="@+id/photo1"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Like a good neighbor,
-        Salvager is there"
-        android:textAlignment="center"
-        android:textSize="30sp"
+        android:src="@drawable/recycle_1"
         android:layout_below="@+id/savannah"
-        android:layout_marginTop="25dp"
-        />
+        android:layout_alignEnd="@+id/split"/>
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/split"
+        android:layout_below="@+id/savannah"
+        android:text="PET or PETE (Polyethylene Terephthalate)"
+        android:textColor="@color/black"
+        android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/horizontalSplit1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/photo1"/>
+
+        <ImageView
+            android:id="@+id/photo2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/recycle_2"
+            android:layout_below="@+id/horizontalSplit1"
+            android:layout_alignEnd="@+id/split"/>
+
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/split"
+            android:layout_below="@+id/horizontalSplit1"
+            android:text="HDPE (High Density Polyethylene)"
+            android:textColor="@color/black"
+            android:textSize="20sp"/>
+
+
+        <TextView
+            android:id="@+id/horizontalSplit2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/photo2"/>
+
+        <ImageView
+            android:id="@+id/photo3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/recycle_3"
+            android:layout_below="@+id/horizontalSplit2"
+            android:layout_alignEnd="@+id/split"/>
+
+        <TextView
+            android:id="@+id/text3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/split"
+            android:layout_below="@+id/horizontalSplit2"
+            android:text="Vinyl or PVC"
+            android:textColor="@color/black"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/horizontalSplit3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/photo3"/>
+
+        <ImageView
+            android:id="@+id/photo4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/recycle_4"
+            android:layout_below="@+id/horizontalSplit3"
+            android:layout_alignEnd="@+id/split"/>
+
+        <TextView
+            android:id="@+id/text4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/split"
+            android:layout_below="@+id/horizontalSplit3"
+            android:text="LDPE (Low Density Polyethylene)"
+            android:textColor="@color/black"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/horizontalSplit4"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/photo4"/>
+
+        <ImageView
+            android:id="@+id/photo5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/recycle_5"
+            android:layout_below="@+id/horizontalSplit4"
+            android:layout_alignEnd="@+id/split"/>
+
+        <TextView
+            android:id="@+id/text5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/split"
+            android:layout_below="@+id/horizontalSplit4"
+            android:text="PP (Polypropylene)"
+            android:textColor="@color/black"
+            android:textSize="20sp"/>
+        <TextView
+            android:id="@+id/horizontalSplit5"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/photo5"/>
+
+        <ImageView
+            android:id="@+id/photo6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/recycle_6"
+            android:layout_below="@+id/horizontalSplit5"
+            android:layout_alignEnd="@+id/split"/>
+
+        <TextView
+            android:id="@+id/text6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/split"
+            android:layout_below="@+id/horizontalSplit5"
+            android:text="PS (Polystyrene)"
+            android:textColor="@color/black"
+            android:textSize="20sp"/>
+        <TextView
+            android:id="@+id/horizontalSplit6"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/photo6"/>
+
+        <ImageView
+            android:id="@+id/photo7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/recycle_7"
+            android:layout_below="@+id/horizontalSplit6"
+            android:layout_alignEnd="@+id/split"/>
+
+        <TextView
+            android:id="@+id/text7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/split"
+            android:layout_below="@+id/horizontalSplit6"
+            android:text="Miscellaneous"
+            android:textColor="@color/black"
+            android:textSize="20sp"/>
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_below="@id/bottom"
+            android:layout_below="@id/photo7"
             android:background="@color/white" />
-        <TextView
-            android:layout_width="1dp"
-            android:layout_height="match_parent"
-            android:layout_centerHorizontal="true"/>
+
+
 
     </RelativeLayout>
 </ScrollView>
