@@ -40,39 +40,12 @@
         android:layout_below="@+id/recycable"
         android:background="@color/black"/>
 
-    <TextView
-        android:id="@+id/information"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/split1"
-        android:text="Product Information:"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        android:textColor="@color/black"/>
-
-    <TextView
-        android:id="@+id/recyclingInfo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/information"
-        android:text="Recycling Number: "
-        android:textSize="15sp"
-        android:textColor="@color/black"/>
-
-    <TextView
-        android:id="@+id/split2"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
-        android:layout_below="@+id/recyclingInfo"
-        android:background="@color/black"/>
 
     <TextView
         android:id="@+id/howTo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/split2"
+        android:layout_below="@id/split1"
         android:text="How to Recycle: "
         android:textStyle="bold"
         android:textSize="30sp"
