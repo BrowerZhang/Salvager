@@ -23,7 +23,7 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
-import com.example.salvager.ml.ModelUnquant;
+import com.example.salvager.ml.ModelFinal;
 
 import org.tensorflow.lite.DataType;
 import org.tensorflow.lite.support.tensorbuffer.TensorBuffer;
@@ -71,7 +71,7 @@ public class FragmentScanner extends Fragment {
 
     public void classifyImage(Bitmap image){
         try {
-            ModelUnquant model = ModelUnquant.newInstance(getActivity().getApplicationContext());
+            ModelFinal model = ModelFinal.newInstance(getActivity().getApplicationContext());
 
             // Creates inputs for reference.
             TensorBuffer inputFeature0 = TensorBuffer.createFixedSize(new int[]{1, 224, 224, 3}, DataType.FLOAT32);
@@ -93,7 +93,7 @@ public class FragmentScanner extends Fragment {
             inputFeature0.loadBuffer(byteBuffer);
 
             // Runs model inference and gets result.
-            ModelUnquant.Outputs outputs = model.process(inputFeature0);
+            ModelFinal.Outputs outputs = model.process(inputFeature0);
             TensorBuffer outputFeature0 = outputs.getOutputFeature0AsTensorBuffer();
 
 
